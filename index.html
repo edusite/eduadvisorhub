@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>EduAdvisorHub</title>
+	<link rel="icon" type="image/x-icon" href="media/logo.png" >
+	<link rel="stylesheet" type="text/css" href="css/footer.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+</head>
+<body class="loogoo">
+	
+	
+	
+
+	<div class="area fde">
+	<div class="container">
+		<div class="card jje">
+			<h1 class="sign">Sign in</h1>
+			<div class="user">
+				<label class="input-group-text"><!--Username--></label>
+				<input type="user" name="user" class="form-control w-50 col-md-6" placeholder="Type your username" id="userr">
+			</div>
+			<div class="password-container">
+  				<input type="password" placeholder="Password..." id="password">
+  				<i class="fa-solid fa-eye" id="eye"></i>
+			</div>
+			
+			
+			<div class="row"> 
+				<button class="btn btn-secondary mmk" onclick="show()">Sign In</button>		
+			</div>
+
+
+			<div class="soc">
+				<a href="https://www.facebook.com/profile.php?id=61556773741486&mibextid=ZbWKw"><i class="fa-brands fa-facebook"></i></a>
+				<a href="https://t.me/eduadvisorhub"><i class="fa-brands fa-telegram"></i></a>
+				<a href="https://www.youtube.com/@EduAdvisorHub"><i class="fa-brands fa-youtube"></i></a>
+			</div>
+		</div>
+	</div>
+</div>
+<script>const passwordInput = document.querySelector("#password")
+const eye = document.querySelector("#eye")
+eye.addEventListener("click", function(){
+  this.classList.toggle("fa-eye-slash")
+  const type = passwordInput.getAttribute("type") === "password" ? "text" : "password"
+  passwordInput.setAttribute("type", type)
+})
+
+</script>
+
+
+<script>
+ 
+        function show() {
+            var text = document.getElementById("userr").value;
+            var password = document.getElementById("password").value;
+ 
+            var home = "pages/home.html";
+ 
+            if (text == "Edu" && password == "Education") {
+           
+               window.location.href = home;
+            }
+            else if (text == "Advisor" && password == "Advisory") {
+                window.location.href = home;
+            }
+            else if (text == "Hub" && password == "Hubbi") {
+                window.location.href = home;
+            }
+            else {
+               alert("Login fail");
+            }
+
+        }
+
+        //User - (Edu) Password - (Education)
+        //User - (Advisor) Password - (Advisory)
+        //User - (Hub) Password - (Hubbi)
+    </script>
+
+
+
+</body>
+</html>
